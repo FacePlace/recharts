@@ -181,9 +181,7 @@ var getTooltipContent = function getTooltipContent(state, chartData, activeIndex
     if (!payload) {
       return result;
     }
-    return [].concat(_toConsumableArray(result), [_objectSpread(_objectSpread({}, getTooltipItem(child, payload)), {}, {
-      activeTabIndex: activeIndex
-    })]);
+    return [].concat(_toConsumableArray(result), [_objectSpread({}, getTooltipItem(child, payload, activeIndex))]);
   }, []);
 };
 

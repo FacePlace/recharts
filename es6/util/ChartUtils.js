@@ -1011,7 +1011,7 @@ export var parseDomainOfCategoryAxis = function parseDomainOfCategoryAxis(specif
   }
   return specifiedDomain;
 };
-export var getTooltipItem = function getTooltipItem(graphicalItem, payload) {
+export var getTooltipItem = function getTooltipItem(graphicalItem, payload, activeIndex) {
   var _graphicalItem$props = graphicalItem.props,
     dataKey = _graphicalItem$props.dataKey,
     name = _graphicalItem$props.name,
@@ -1024,6 +1024,7 @@ export var getTooltipItem = function getTooltipItem(graphicalItem, payload) {
     unit: unit,
     formatter: formatter,
     name: name || dataKey,
+    activeTabIndex: activeIndex,
     color: getMainColorOfGraphicItem(graphicalItem),
     value: getValueByDataKey(payload, dataKey),
     type: tooltipType,

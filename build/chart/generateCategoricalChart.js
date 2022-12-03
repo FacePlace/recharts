@@ -187,7 +187,7 @@ var getTooltipContent = function (state, chartData, activeIndex, activeLabel) {
         if (!payload) {
             return result;
         }
-        return __spreadArray(__spreadArray([], result, true), [__assign(__assign({}, (0, ChartUtils_1.getTooltipItem)(child, payload)), { activeTabIndex: activeIndex })], false);
+        return __spreadArray(__spreadArray([], result, true), [__assign({}, (0, ChartUtils_1.getTooltipItem)(child, payload, activeIndex))], false);
     }, []);
 };
 var getTooltipData = function (state, chartData, layout, rangeObj) {

@@ -1184,7 +1184,7 @@ export const parseDomainOfCategoryAxis = (
   return specifiedDomain;
 };
 
-export const getTooltipItem = (graphicalItem: any, payload: any, activeIndex: number) => {
+export const getTooltipItem = (graphicalItem: any, payload: any, activeIndex?: number) => {
   const { dataKey, name, unit, formatter, tooltipType, chartType } = graphicalItem.props;
 
   return {

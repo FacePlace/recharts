@@ -863,9 +863,9 @@ var parseDomainOfCategoryAxis = function (specifiedDomain, calculatedDomain, axi
     return specifiedDomain;
 };
 exports.parseDomainOfCategoryAxis = parseDomainOfCategoryAxis;
-var getTooltipItem = function (graphicalItem, payload) {
+var getTooltipItem = function (graphicalItem, payload, activeIndex) {
     var _a = graphicalItem.props, dataKey = _a.dataKey, name = _a.name, unit = _a.unit, formatter = _a.formatter, tooltipType = _a.tooltipType, chartType = _a.chartType;
-    return __assign(__assign({}, (0, types_1.filterProps)(graphicalItem)), { dataKey: dataKey, unit: unit, formatter: formatter, name: name || dataKey, color: (0, exports.getMainColorOfGraphicItem)(graphicalItem), value: getValueByDataKey(payload, dataKey), type: tooltipType, payload: payload, chartType: chartType });
+    return __assign(__assign({}, (0, types_1.filterProps)(graphicalItem)), { dataKey: dataKey, unit: unit, formatter: formatter, name: name || dataKey, activeTabIndex: activeIndex, color: (0, exports.getMainColorOfGraphicItem)(graphicalItem), value: getValueByDataKey(payload, dataKey), type: tooltipType, payload: payload, chartType: chartType });
 };
 exports.getTooltipItem = getTooltipItem;
 //# sourceMappingURL=ChartUtils.js.map

@@ -80,11 +80,12 @@ export declare const MAX_VALUE_REG: RegExp;
 export declare const parseSpecifiedDomain: (specifiedDomain: any, dataDomain: any, allowDataOverflow: boolean) => any;
 export declare const getBandSizeOfAxis: (axis: any, ticks?: Array<TickItem>, isBar?: boolean) => any;
 export declare const parseDomainOfCategoryAxis: (specifiedDomain: Array<any>, calculatedDomain: Array<any>, axisChild: ReactElement) => any[];
-export declare const getTooltipItem: (graphicalItem: any, payload: any) => {
+export declare const getTooltipItem: (graphicalItem: any, payload: any, activeIndex?: number) => {
     dataKey: any;
     unit: any;
     formatter: any;
     name: any;
+    activeTabIndex: number;
     color: any;
     value: any;
     type: any;
