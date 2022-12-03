@@ -187,7 +187,7 @@ var getTooltipContent = function (state, chartData, activeIndex, activeLabel) {
         if (!payload) {
             return result;
         }
-        return __spreadArray(__spreadArray([], result, true), [(0, ChartUtils_1.getTooltipItem)(child, payload)], false);
+        return __spreadArray(__spreadArray([], result, true), [__assign(__assign({}, (0, ChartUtils_1.getTooltipItem)(child, payload)), { activeTabIndex: activeIndex })], false);
     }, []);
 };
 var getTooltipData = function (state, chartData, layout, rangeObj) {
@@ -802,13 +802,12 @@ var generateCategoricalChart = function (_a) {
                     if (!tooltipItem) {
                         return null;
                     }
-                    var _a = _this.state, isTooltipActive = _a.isTooltipActive, activeCoordinate = _a.activeCoordinate, activePayload = _a.activePayload, activeLabel = _a.activeLabel, offset = _a.offset, activeTooltipIndex = _a.activeTooltipIndex;
+                    var _a = _this.state, isTooltipActive = _a.isTooltipActive, activeCoordinate = _a.activeCoordinate, activePayload = _a.activePayload, activeLabel = _a.activeLabel, offset = _a.offset;
                     return (0, react_1.cloneElement)(tooltipItem, {
                         viewBox: __assign(__assign({}, offset), { x: offset.left, y: offset.top }),
                         active: isTooltipActive,
                         label: activeLabel,
-                        payload: isTooltipActive
-                            ? __assign(__assign({}, activePayload), { activeTooltipIndex: activeTooltipIndex }) : [],
+                        payload: isTooltipActive ? activePayload : [],
                         coordinate: activeCoordinate,
                     });
                 };

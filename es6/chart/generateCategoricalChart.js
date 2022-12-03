@@ -181,7 +181,9 @@ var getTooltipContent = function getTooltipContent(state, chartData, activeIndex
     if (!payload) {
       return result;
     }
-    return [].concat(_toConsumableArray(result), [getTooltipItem(child, payload)]);
+    return [].concat(_toConsumableArray(result), [_objectSpread(_objectSpread({}, getTooltipItem(child, payload)), {}, {
+      activeTabIndex: activeIndex
+    })]);
   }, []);
 };
 
@@ -1158,8 +1160,7 @@ export var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           activeCoordinate = _this$state5.activeCoordinate,
           activePayload = _this$state5.activePayload,
           activeLabel = _this$state5.activeLabel,
-          offset = _this$state5.offset,
-          activeTooltipIndex = _this$state5.activeTooltipIndex;
+          offset = _this$state5.offset;
         return /*#__PURE__*/cloneElement(tooltipItem, {
           viewBox: _objectSpread(_objectSpread({}, offset), {}, {
             x: offset.left,
@@ -1167,9 +1168,7 @@ export var generateCategoricalChart = function generateCategoricalChart(_ref6) {
           }),
           active: isTooltipActive,
           label: activeLabel,
-          payload: isTooltipActive ? _objectSpread(_objectSpread({}, activePayload), {}, {
-            activeTooltipIndex: activeTooltipIndex
-          }) : [],
+          payload: isTooltipActive ? activePayload : [],
           coordinate: activeCoordinate
         });
       };

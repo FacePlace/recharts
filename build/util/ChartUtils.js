@@ -370,10 +370,7 @@ var parseErrorBarsOfAxis = function (data, items, dataKey, axisType, layout) {
         .map(function (item) { return (0, exports.getDomainOfErrorBars)(data, item, dataKey, layout, axisType); })
         .filter(function (entry) { return !lodash_1.default.isNil(entry); });
     if (domains && domains.length) {
-        return domains.reduce(function (result, entry) { return [Math.min(result[0], entry[0]), Math.max(result[1], entry[1])]; }, [
-            Infinity,
-            -Infinity,
-        ]);
+        return domains.reduce(function (result, entry) { return [Math.min(result[0], entry[0]), Math.max(result[1], entry[1])]; }, [Infinity, -Infinity]);
     }
     return null;
 };
@@ -387,10 +384,7 @@ var getDomainOfItemsWithSameAxis = function (data, items, type, layout, filterNi
         return getDomainOfDataByKey(data, dataKey, type, filterNil);
     });
     if (type === 'number') {
-        return domains.reduce(function (result, entry) { return [Math.min(result[0], entry[0]), Math.max(result[1], entry[1])]; }, [
-            Infinity,
-            -Infinity,
-        ]);
+        return domains.reduce(function (result, entry) { return [Math.min(result[0], entry[0]), Math.max(result[1], entry[1])]; }, [Infinity, -Infinity]);
     }
     var tag = {};
     return domains.reduce(function (result, entry) {

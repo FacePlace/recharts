@@ -215,7 +215,7 @@ const getTooltipContent = (
       return result;
     }
 
-    return [...result, getTooltipItem(child, payload)];
+    return [...result, { ...getTooltipItem(child, payload), activeTabIndex: activeIndex }];
   }, []);
 };
 
@@ -1822,18 +1822,13 @@ export const generateCategoricalChart = ({
         return null;
       }
 
-      const { isTooltipActive, activeCoordinate, activePayload, activeLabel, offset, activeTooltipIndex } = this.state;
+      const { isTooltipActive, activeCoordinate, activePayload, activeLabel, offset } = this.state;
 
       return cloneElement(tooltipItem, {
         viewBox: { ...offset, x: offset.left, y: offset.top },
         active: isTooltipActive,
         label: activeLabel,
-        payload: isTooltipActive
-          ? {
-              ...activePayload,
-              activeTooltipIndex,
-            }
-          : [],
+        payload: isTooltipActive ? activePayload : [],
         coordinate: activeCoordinate,
       });
     };

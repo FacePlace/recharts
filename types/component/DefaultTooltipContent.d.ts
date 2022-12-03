@@ -7,6 +7,7 @@ export interface Payload<TValue extends ValueType, TName extends NameType> {
     type?: TooltipType;
     color?: string;
     formatter?: Formatter<TValue, TName>;
+    activeTabIndex: number;
     name?: TName;
     value?: TValue;
     unit?: ReactNode;
