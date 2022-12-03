@@ -1184,7 +1184,7 @@ export const parseDomainOfCategoryAxis = (
   return specifiedDomain;
 };
 
-export const getTooltipItem = (graphicalItem: any, payload: any) => {
+export const getTooltipItem = (graphicalItem: any, payload: any, activeIndex: number) => {
   const { dataKey, name, unit, formatter, tooltipType, chartType } = graphicalItem.props;
 
   return {
@@ -1193,6 +1193,7 @@ export const getTooltipItem = (graphicalItem: any, payload: any) => {
     unit,
     formatter,
     name: name || dataKey,
+    activeTabIndex: activeIndex,
     color: getMainColorOfGraphicItem(graphicalItem),
     value: getValueByDataKey(payload, dataKey),
     type: tooltipType,

@@ -215,7 +215,7 @@ const getTooltipContent = (
       return result;
     }
 
-    return [...result, { ...getTooltipItem(child, payload), activeTabIndex: activeIndex }];
+    return [...result, { ...getTooltipItem(child, payload, activeIndex) }];
   }, []);
 };
 
