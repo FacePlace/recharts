@@ -1311,6 +1311,7 @@ export const generateCategoricalChart = ({
 
       if (syncId === cId && chartId !== this.uniqueChartId) {
         this.clearDeferId();
+        // @ts-ignore
         this.deferId = defer && defer(this.applySyncEvent.bind(this, data));
       }
     };
@@ -1443,6 +1444,7 @@ export const generateCategoricalChart = ({
 
         const handler = event;
 
+        // @ts-ignore
         handler(mouse, e);
       }
     };
@@ -1675,6 +1677,7 @@ export const generateCategoricalChart = ({
     renderPolarAxis = (element: any, displayName: string, index: number) => {
       const axisType = _.get(element, 'type.axisType');
       const axisMap = _.get(this.state, `${axisType}Map`);
+      // @ts-ignore
       const axisOption = axisMap[element.props[`${axisType}Id`]];
 
       return cloneElement(element, {
