@@ -282,14 +282,12 @@ export class CartesianGrid extends PureComponent<Props> {
 
     return (
       <g className="recharts-cartesian-grid">
-        <a href="/test/2">
-          {this.renderBackground()}
-          {horizontal && this.renderHorizontal(horizontalPoints)}
-          {vertical && this.renderVertical(verticalPoints)}
+        {this.renderBackground()}
+        {horizontal && this.renderHorizontal(horizontalPoints)}
+        {vertical && this.renderVertical(verticalPoints)}
 
-          {horizontal && this.renderHorizontalStripes(horizontalPoints)}
-          {vertical && this.renderVerticalStripes(verticalPoints)}
-        </a>
+        {horizontal && this.renderHorizontalStripes(horizontalPoints)}
+        {vertical && this.renderVerticalStripes(verticalPoints)}
       </g>
     );
   }

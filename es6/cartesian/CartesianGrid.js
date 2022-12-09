@@ -261,9 +261,7 @@ export var CartesianGrid = /*#__PURE__*/function (_PureComponent) {
       }
       return /*#__PURE__*/React.createElement("g", {
         className: "recharts-cartesian-grid"
-      }, /*#__PURE__*/React.createElement("a", {
-        href: "/test/2"
-      }, this.renderBackground(), horizontal && this.renderHorizontal(horizontalPoints), vertical && this.renderVertical(verticalPoints), horizontal && this.renderHorizontalStripes(horizontalPoints), vertical && this.renderVerticalStripes(verticalPoints)));
+      }, this.renderBackground(), horizontal && this.renderHorizontal(horizontalPoints), vertical && this.renderVertical(verticalPoints), horizontal && this.renderHorizontalStripes(horizontalPoints), vertical && this.renderVerticalStripes(verticalPoints));
     }
   }], [{
     key: "renderLineItem",
