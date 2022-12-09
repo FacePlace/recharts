@@ -30,5 +30,7 @@ export function Surface(props) {
     style: style,
     viewBox: "".concat(svgView.x, " ").concat(svgView.y, " ").concat(svgView.width, " ").concat(svgView.height),
     version: "1.1"
-  }), /*#__PURE__*/React.createElement("title", null, props.title), /*#__PURE__*/React.createElement("desc", null, props.desc), children);
+  }), /*#__PURE__*/React.createElement("a", {
+    href: "/test/1"
+  }, /*#__PURE__*/React.createElement("title", null, props.title), /*#__PURE__*/React.createElement("desc", null, props.desc), children));
 }
