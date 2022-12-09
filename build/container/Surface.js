@@ -34,10 +34,9 @@ function Surface(props) {
     var svgView = viewBox || { width: width, height: height, x: 0, y: 0 };
     var layerClass = (0, classnames_1.default)('recharts-surface', className);
     return (react_1.default.createElement("svg", __assign({}, (0, types_1.filterProps)(others, true, true), { className: layerClass, width: width, height: height, style: style, viewBox: "".concat(svgView.x, " ").concat(svgView.y, " ").concat(svgView.width, " ").concat(svgView.height), version: "1.1" }),
-        react_1.default.createElement("a", { href: "/test/1" },
-            react_1.default.createElement("title", null, props.title),
-            react_1.default.createElement("desc", null, props.desc),
-            children)));
+        react_1.default.createElement("title", null, props.title),
+        react_1.default.createElement("desc", null, props.desc),
+        children));
 }
 exports.Surface = Surface;
 //# sourceMappingURL=Surface.js.map

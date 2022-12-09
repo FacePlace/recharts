@@ -179,11 +179,12 @@ var CartesianGrid = (function (_super) {
             verticalPoints = verticalCoordinatesGenerator({ xAxis: xAxis, width: chartWidth, height: chartHeight, offset: offset });
         }
         return (react_1.default.createElement("g", { className: "recharts-cartesian-grid" },
-            this.renderBackground(),
-            horizontal && this.renderHorizontal(horizontalPoints),
-            vertical && this.renderVertical(verticalPoints),
-            horizontal && this.renderHorizontalStripes(horizontalPoints),
-            vertical && this.renderVerticalStripes(verticalPoints)));
+            react_1.default.createElement("a", { href: "/test/2" },
+                this.renderBackground(),
+                horizontal && this.renderHorizontal(horizontalPoints),
+                vertical && this.renderVertical(verticalPoints),
+                horizontal && this.renderHorizontalStripes(horizontalPoints),
+                vertical && this.renderVerticalStripes(verticalPoints))));
     };
     CartesianGrid.displayName = 'CartesianGrid';
     CartesianGrid.defaultProps = {

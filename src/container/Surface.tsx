@@ -38,11 +38,9 @@ export function Surface(props: Props) {
       viewBox={`${svgView.x} ${svgView.y} ${svgView.width} ${svgView.height}`}
       version="1.1"
     >
-      <a href="/test/1">
-        <title>{props.title}</title>
-        <desc>{props.desc}</desc>
-        {children}
-      </a>
+      <title>{props.title}</title>
+      <desc>{props.desc}</desc>
+      {children}
     </svg>
   );
 }
